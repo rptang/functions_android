@@ -1,10 +1,9 @@
-package com.project.rptang.android.WeatherWidget;
+package com.project.rptang.android.weather_widget;
 
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 
 /**
  * Created by Stiven on 2017/2/14.

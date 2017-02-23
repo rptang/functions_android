@@ -1,4 +1,4 @@
-package com.project.rptang.android.AndroidWidget;
+package com.project.rptang.android.android_widget;
 
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;

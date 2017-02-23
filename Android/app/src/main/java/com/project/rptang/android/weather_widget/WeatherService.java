@@ -1,4 +1,4 @@
-package com.project.rptang.android.WeatherWidget;
+package com.project.rptang.android.weather_widget;
 
 import android.app.Service;
 import android.appwidget.AppWidgetManager;

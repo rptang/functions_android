@@ -1,13 +1,11 @@
-package com.project.rptang.android.AndroidWidget;
+package com.project.rptang.android.android_widget;
 
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
-import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.os.IBinder;
 import android.widget.RemoteViews;
-import android.widget.TextView;
 
 import com.project.rptang.android.R;
 

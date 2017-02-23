@@ -1,11 +1,13 @@
-package com.project.rptang.android.AndroidWidget;
+package com.project.rptang.android.android_widget;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.project.rptang.android.R;
 
+/**
+ * 桌面小组件：时间
+ */
 public class AndroidWidgetActivity extends Activity {
 
     @Override

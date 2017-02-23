@@ -36,7 +36,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".zxing.ZxingActivity" />
         <activity
-            android:name=".AndroidWidget.AndroidWidgetActivity"
+            android:name=".android_widget.AndroidWidgetActivity"
             android:label="Functions">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -71,7 +71,7 @@
             <!--</intent-filter>-->
         <!--</activity>-->
 
-        <receiver android:name=".WeatherWidget.WeatherProvider">
+        <receiver android:name=".weather_widget.WeatherProvider">
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/weatherconfig" />
@@ -82,7 +82,7 @@
         </receiver>
 
         <service
-            android:name=".WeatherWidget.WeatherService"></service>
+            android:name=".weather_widget.WeatherService"></service>
     </application>
 
 </manifest>
