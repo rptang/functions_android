@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_message_logging"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.rptang.android.message_logging.MessageLoggingActivity">
+
+    <!--<com.project.rptang.android.message_logging.MyActionBar-->
+
+        <!--android:id="@+id/message_action_bar"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--app:leftText="紧急呼叫"-->
+        <!--app:leftTextColor="#FFF"-->
+        <!--app:leftTextSize="5sp"-->
+        <!--app:leftTextDrawable="@mipmap/btn_jjhj_1"-->
+        <!--app:leftTextPaddingLeft="12dp"-->
+        <!--app:leftTextPaddingTop="12dp"-->
+
+        <!--app:rightTextSize="5sp"-->
+        <!--app:rightTextDrawable="@mipmap/btn_lsjl_1"-->
+        <!--app:rightText="通话记录"-->
+        <!--app:rightTextColor="#FFF"-->
+        <!--app:rightTextPaddingRight="12dp"-->
+        <!--app:rightTextPaddingTop="12dp"-->
+
+        <!--app:mtitle="呼叫"-->
+        <!--app:titleTextColor="#FFF"-->
+        <!--app:titleTextSize="7sp"-->
+
+        <!--app:actionbarBackground="#1e82d2">-->
+
+    <!--</com.project.rptang.android.message_logging.MyActionBar>-->
+
+    <com.project.rptang.android.message_logging.MyActionBar
+
+        android:id="@+id/message_action_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:leftText="紧急呼叫"
+        app:leftTextColor="#FFF"
+        app:leftTextSize="18sp"
+        app:leftTextDrawable="@mipmap/btn_jjhj_1"
+        app:leftTextPaddingLeft="36dp"
+        app:leftTextPaddingTop="36dp"
+
+        app:rightTextSize="18sp"
+        app:rightTextDrawable="@mipmap/btn_lsjl_1"
+        app:rightText="通话记录"
+        app:rightTextColor="#FFF"
+        app:rightTextPaddingRight="36dp"
+        app:rightTextPaddingTop="36dp"
+
+        app:mtitle="呼叫"
+        app:titleTextColor="#FFF"
+        app:titleTextSize="24sp"
+
+        app:actionbarBackground="#1e82d2">
+
+    </com.project.rptang.android.message_logging.MyActionBar>
+
+</RelativeLayout>

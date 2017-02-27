@@ -109,13 +109,22 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".custom_upload_image.CustomUploadImageActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".custom_upload_image.CutPictureAty" />
+        <activity android:name=".message_logging.MessageLoggingActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
-        <activity android:name=".custom_upload_image.CutPictureAty"></activity>
     </application>
 
 </manifest>
