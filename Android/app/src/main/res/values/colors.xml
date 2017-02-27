@@ -47,4 +47,8 @@
     <color name="cal_color_red">#FFE54E36</color>
     <color name="cal_color_green">#FF16A085</color>
     <color name="cal_color_point_blue">#FF1875D1</color>
+
+
+    <color name="login_system_tip">#666666</color>
+    <color name="login_confirm">#333333</color>
 </resources>

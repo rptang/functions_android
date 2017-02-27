@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">时间显示</string>
+    <string name="login_pwd_send">密码已发送到您的手机</string>
+    <string name="login_id_pwd_error">您输入的工号或密码有误</string>
+    <string name="login_confirm">确认</string>
 </resources>

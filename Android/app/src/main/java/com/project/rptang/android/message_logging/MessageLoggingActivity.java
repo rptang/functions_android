@@ -19,8 +19,8 @@ public class MessageLoggingActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_logging);
-        mDisplayMetrics = getResources().getDisplayMetrics();
-        Log.d(TAG, "onCreate: "+mDisplayMetrics.density);
+
+        showDialog();
 
         actionBar = (MyActionBar) findViewById(R.id.message_action_bar);
 
@@ -36,5 +36,14 @@ public class MessageLoggingActivity extends Activity {
         });
 
         actionBar.setRightIsVisible(true);
+    }
+
+    private void showDialog(){
+        new LoginDialog(this)
+                .builder()
+                .setTextSystemInfo(getResources().getString(R.string.login_id_pwd_error))
+                .setImageSystemInfo(getResources().getDrawable(R.mipmap.btn_jjhj_2))
+                .setDismissOnTouchOutside(false)
+                .show();
     }
 }
