@@ -51,4 +51,6 @@
 
     <color name="login_system_tip">#666666</color>
     <color name="login_confirm">#333333</color>
+    <color name="gray">#88555555</color>
+    <color name="bar">#80CBC4</color>
 </resources>
