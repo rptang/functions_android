@@ -13,8 +13,9 @@ import android.widget.Toast;
 import com.project.rptang.android.R;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 import com.xys.libzxing.zxing.encoding.EncodingUtils;
+import com.zhy.autolayout.AutoLayoutActivity;
 
-public class ZxingActivity extends AppCompatActivity {
+public class ZxingActivity extends AutoLayoutActivity {
 
     private TextView tv_result;
     private EditText et_content;
@@ -32,6 +33,14 @@ public class ZxingActivity extends AppCompatActivity {
 
     public void scan(View view) {
         startActivityForResult(new Intent(ZxingActivity.this, CaptureActivity.class), 0);
+        customScan();
+    }
+
+    public void customScan(){
+//        new IntentIntegrator(this)
+//                .setOrientationLocked(false)
+//                .setCaptureActivity(CustomScanActivity.class) // 设置自定义的activity是CustomActivity
+//                .initiateScan(); // 初始化扫描
     }
 
     public void make(View view){

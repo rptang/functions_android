@@ -36,7 +36,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".zxing.ZxingActivity" />
+        <activity android:name=".zxing.ZxingActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".android_widget.AndroidWidgetActivity"
             android:label="Functions">
@@ -137,11 +143,7 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".scroll_message_listview.ScrollMessageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
