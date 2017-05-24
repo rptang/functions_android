@@ -44,8 +44,7 @@ public class CustomUploadImageActivity extends Activity implements OnClickListen
         new SelectDialog(context)
                 .builder()
                 .setCancelable(true)
-                .setTitle("请选择操作")
-                .setCanceledOnTouchOutside(true)
+                .setCanceledOnTouchOutside(false)
                 .addSelectItem("相机", SelectDialog.SelectItemColor.Green,
                         new SelectDialog.OnSelectItemClickListener() {
                             @Override
