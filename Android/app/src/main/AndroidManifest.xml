@@ -133,15 +133,17 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".crosswalk.CrossWalkActivity"></activity>
+        <activity android:name=".crosswalk.CrossWalkActivity" />
         <activity android:name=".data_binding.DataBindingActivity">
+        </activity>
+        <activity android:name=".data_binding.RecycleViewActivity" />
+        <activity android:name=".bluetooth.BlueToothActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".data_binding.RecycleViewActivity"></activity>
     </application>
 
 </manifest>
