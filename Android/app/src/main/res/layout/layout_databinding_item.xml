@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="employee"
+            type="com.project.rptang.android.data_binding.DataBindingActivity.Employee"></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@{employee.firstName}"
+            android:textColor="#0094ff"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="@{employee.lastName??`数据为空`}"
+            android:textColor="#00ff94"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+</layout>
+

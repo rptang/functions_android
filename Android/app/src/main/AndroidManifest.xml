@@ -28,6 +28,10 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
     <application
         android:name=".upload_profile.MyApplication"
         android:allowBackup="true"
@@ -134,15 +138,35 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".crosswalk.CrossWalkActivity" />
-        <activity android:name=".data_binding.DataBindingActivity">
-        </activity>
-        <activity android:name=".data_binding.RecycleViewActivity" />
-        <activity android:name=".bluetooth.BlueToothActivity">
+        <activity android:name=".data_binding.DataBindingActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".data_binding.RecycleViewActivity" />
+        <activity android:name=".bluetooth.BlueToothActivity">
+
+        </activity>
+        <activity android:name=".bluetooth.le.DeviceScanActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".bluetooth.le.DeviceControlActivity" />
+
+        <service
+            android:name=".bluetooth.le.BluetoothLeService"
+            android:enabled="true" />
+
+        <activity android:name=".bluetooth.BlueTeethActivity">
+
         </activity>
     </application>
 

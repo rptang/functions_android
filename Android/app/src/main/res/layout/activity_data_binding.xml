@@ -11,11 +11,15 @@
         <variable
             name="presenter"
             type="com.project.rptang.android.data_binding.DataBindingActivity.Presenter"></variable>
+        <variable
+            name="adapter"
+            type="android.widget.BaseAdapter"></variable>
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context="com.project.rptang.android.data_binding.DataBindingActivity">
 
         <TextView
@@ -28,6 +32,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onTextChanged="@{presenter.onTextChanged}"/>
+
+        <ListView
+            android:id="@+id/lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{adapter}"></ListView>
 
     </LinearLayout>
 

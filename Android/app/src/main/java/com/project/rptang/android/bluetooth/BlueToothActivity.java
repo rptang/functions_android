@@ -137,7 +137,7 @@ public class BlueToothActivity extends Activity implements View.OnClickListener 
         public void onReceive(Context context, Intent intent) {
             //获得扫描到的远程蓝牙设备  
             BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-            if(device.getName() != null && device.getName().equalsIgnoreCase("LAPTOP-K1EOD4OP")){
+            if(device.getName() != null && device.getName().equalsIgnoreCase("PAB1000160810455")){
                 if (mBluetoothService != null) {
                     //根据MAC地址远程获取一个蓝牙设备，这里固定了，实际开发中，需要动态设置参数（MAC地址）
                     BluetoothDevice sensor_down = bluetoothAdapter.getRemoteDevice(device.getAddress());

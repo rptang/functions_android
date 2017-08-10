@@ -13,6 +13,7 @@ import android.util.Log;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Method;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.UUID;
@@ -80,8 +81,11 @@ public class BluetoothService {
             this.index = index;
             BluetoothSocket tmp = null;
             try {
-                tmp = device.createRfcommSocketToServiceRecord(MY_UUID);// Get a BluetoothSocket for a connection with the given BluetoothDevice
-            } catch (IOException e) {
+                tmp = mmDevice.createRfcommSocketToServiceRecord(MY_UUID);// Get a BluetoothSocket for a connection with the given BluetoothDevice
+                Method m = mmDevice.getClass().getMethod("createRfcommSocket", new Class[]{int.class});
+                tmp = (BluetoothSocket) m.invoke(device, 1);//这里端口// Get a BluetoothSocket for a connection with the given BluetoothDevice
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             mmSocket = tmp;
         }
@@ -96,9 +100,23 @@ public class BluetoothService {
 
                 @Override
                 public void run() {
+
+                    try{
+                        if (mmDevice.getBondState() == BluetoothDevice.BOND_NONE) {
+                            Method creMethod = BluetoothDevice.class.getMethod("createBond");
+                            Log.e("TAG", "开始配对");
+                            creMethod.invoke(mmDevice);
+                        } else {
+                        }
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
                     try {
                         mmSocket.connect();// This is a blocking call and will only return on a successful connection or an exception
+                        System.out.println("连接成功");
                     } catch (IOException e) {
+                        System.out.println("连接失败");
                         connectionFailed(1);
                         try {
                             mmSocket.close();
